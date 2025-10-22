@@ -1,5 +1,4 @@
-
-import Nav from "./Nav"
+import React from "react"
 
 import img from "../assets/OIP.jpg"
 
@@ -30,13 +29,13 @@ export default function Contact({isDark,toggleTheme})
 
         {/* <Nav isDark={isDark} toggleTheme={toggleTheme} /> */}
       
-        <div className="flex pt-40 ">
+        <div className="flex pt-40 h-screen ">
             <div>
                 <img src={img} alt="" />
             </div>
 
             <div className="ml-100 mr-10     ">
-                                <h1 className="text-bold text-6xl">Contact Me</h1>
+                 <h1 className="text-bold text-6xl">Contact Me</h1>
             <p className="mt-15 text-2xl"> You can contact me at the places mentioned below. I will try to get back to you as fast as I can.</p>
 
 
