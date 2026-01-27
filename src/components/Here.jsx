@@ -10,7 +10,7 @@ import {
 import React from "react";
 import img from "../assets/OIP.jpg";
 
-const TechLinks = [
+const TechLinks = [ 
   { icon: <FaDatabase size={40} color="green" />, name: "Database" },
   { icon: <FaReact size={40} color="#61DBFB" />, name: "React" },
   { icon: <FaJava size={40} color="red" />, name: "Java" },

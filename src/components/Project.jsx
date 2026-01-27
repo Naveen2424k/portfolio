@@ -1,71 +1,80 @@
 import Nav from "./Nav";
-import img from "../assets/OIP.jpg";
-
+import img from "../assets/eduu.png";
+import img1 from "../assets/edd.jpg";
+import img2 from "../assets/1.jpg";
+import img3 from "../assets/card3.png";
 import Card from "./Card";
-export default function Project({isDark,toggleTheme})
-{
-    return(
-        <>
+
+export default function Project({ isDark, toggleTheme }) {
+  return (
+    <>
+      <div className="">
+        {/* Top banner section */}
+        <div className="flex pt-40 items-center justify-center gap-12 ">
+          <img
+            src={img}
+            alt="Projects"
+            className="w-80 h-80 object-cover rounded-2xl shadow-xl transform transition duration-500 hover:scale-105 bg-white"
+          />
+
+          <div className="max-w-3xl">
+            <h1
+              className={`text-bold text-6xl ${isDark ? "text-white" : "text-black"}`}
+            >
+              PROJECTS
+            </h1>
+
+            <p
+              className={`mt-4 text-lg ${
+                isDark ? "text-white/80" : "text-black/80"
+              }`}
+            >
+              My projects use modern technologies and tools. I love building
+              backend applications, frontend interfaces, cloud systems, and
+              automation scripts. Below are some highlighted projects —
+              more will be added soon.
+            </p>
+          </div>
+        </div>
+
+        {/* Project Cards */}
+        <div className="pt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
+          <Card
+            title="Education Platform"
+            description="A complete Guide of a Student."
+            image={img1}
+            link="https://naveen2424k.github.io/Education/"
+            isDark={isDark}
+          />
+
+          <Card
+            title="Hospital Management System"
+            description="A system to manage hospital operations efficiently."
+            image={img2}
+            link="https://hms-o4rtbyzwv-naveen2424ks-projects.vercel.app"
+            isDark={isDark}
+          />
+
+          <Card
+            title="UZHAVAN"
+            description="Agri product."
+            image={img3}
+            link="https://naveen2424k.github.io/Uzhavan/"
+            isDark={isDark}
+          />
+
         
-        <div className="">
-            <div>
-                {/* <Nav isDark={isDark} toggleTheme={toggleTheme} /> */}
-            </div>
-            <div className="flex pt-40 ">
-                <div className="ml-20">
-                    <img src={img} alt="" className="w-80 h-50 object-cover" />
-                </div>
-                <div className="  justify-items-center mr-20">
-                    <h1 className={` text-bold text-6xl ${isDark ? "text-white" : "text-black"}`}>PROJECTS</h1>
-                    <p className={`mt-4  justify-items-center ml-40 ${isDark ? "text-white" : "text-black"}`}>My projects make use of a vast variety of latest technology tools. My best experience is to create Backend Projects, build Python Scripts and setup Cloud Infrastructures. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.</p>
-                </div>
-            </div>
 
-            <div className="flex justify-center flex-wrap pt-20 grid grid-cols-3 gap-2">
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-                <Card 
-                    title="Project 1"
-                    description="Description for Project 1"
-                    link="#"
-                    isDark={isDark}
-                />
-            </div>
-            <div className="pt-20 pb-20">
-                <button className="bg-red-900 border- border-red-900 hover:bg-green-900 rounded-xl ml-180 p-2">More Projects</button>
-                </div>
+         
+        </div>
 
-
-               
-            </div>
-        </>
-    )
+        {/* Show More Button */}
+        <div className="pt-20 pb-20 flex justify-center">
+          <button className="bg-red-900 text-white hover:bg-green-900 px-8 py-3 rounded-xl text-lg shadow-xl transition duration-300 hover:scale-105">
+            More Projects
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -1,58 +1,87 @@
-import React from "react"
+import React from "react";
+import img from "../assets/OIP.jpg";
+import imgg from "../assets/contact.png";
 
-import img from "../assets/OIP.jpg"
 
 import {
-    FaGithub,
-    FaLinkedin,
-    FaTwitter,
-    FaInstagram,
-    FaFacebook,
-    FaYoutube
-} from "react-icons/fa"
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+import { SiLeetcode } from "react-icons/si";
+
 
 const socialLinks = [
   { icon: FaGithub, url: "https://github.com", color: "grey" },
-  { icon: FaLinkedin, url: "https://linkedin.com/in", color: "#0A66C2" },
-  { icon: FaTwitter, url: "https://twitter.com", color: "#1DA1F2" },
+  { icon: FaLinkedin, url: "linkedin.com/in/naveen-k2424", color: "#0A66C2" },
+
   { icon: FaInstagram, url: "https://instagram.com", color: "#E4405F" },
-  { icon: FaFacebook, url: "https://facebook.com", color: "#1877F2" },
-  { icon: FaYoutube, url: "https://youtube.com", color: "#FF0000" },
+
+
+
+   { icon: FaWhatsapp, url: "https://wa.me/919342905752?text=Hello%20Naveen%2C%20I%20want%20to%20connect%20with%20you", color: "#25D366" },
+   { icon: SiLeetcode, url: "https://leetcode.com/u/wL3akc8fai/", color: "#FFA116" },
 ];
 
-export default function Contact({isDark,toggleTheme})
-{   
-    return(
-        <>
+export default function Contact({ isDark }) {
+  return (
+    <div
+      className={`min-h-screen pt-32 px-10 flex items-center justify-center transition-colors duration-500 ${
+        isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
+      }`}
+    >
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <div>
-
-        {/* <Nav isDark={isDark} toggleTheme={toggleTheme} /> */}
-      
-        <div className="flex pt-40 h-screen ">
-            <div>
-                <img src={img} alt="" />
-            </div>
-
-            <div className="ml-100 mr-10     ">
-                 <h1 className="text-bold text-6xl">Contact Me</h1>
-            <p className="mt-15 text-2xl"> You can contact me at the places mentioned below. I will try to get back to you as fast as I can.</p>
-
-
-            <div className="flex space-x-6 mt-10">
-          {socialLinks.map(({ icon: Icon, url, color }, index) => (
-            <a key={index} href={url} target="_blank" rel="noopener noreferrer">    
-                <Icon style={{ color, fontSize: "2.8rem" }} className="transition-100 ease-in-out hover:scale-110" />
-            </a>
-          ))}
-          </div>
-          <div>
-            <button className="bg-red-500  hover:bg-green-900 text-white py-2 px-4 rounded mt-10">See my Resume</button>
-          </div>
-            </div>
+        {/* LEFT IMAGE */}
+        <div className="flex justify-center">
+          <img
+            src={imgg}
+            alt="Contact"
+            className="w-96 rounded-2xl shadow-2xl transform transition duration-500 hover:scale-105"
+          />
         </div>
 
+        {/* RIGHT CONTENT */}
+        <div>
+          <h1 className="text-6xl font-bold mb-6">Contact Me</h1>
+
+          <p className="text-xl opacity-80 mb-10">
+            You can reach me through any of the platforms below.  
+            I usually reply quickly and I'm always open to new opportunities.
+          </p>
+
+          {/* Social Icons */}
+          <div className="grid grid-cols-3 gap-6 max-w-sm">
+            {socialLinks.map(({ icon: Icon, url, color }, index) => (
+              <a
+                key={index}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center p-4 rounded-xl shadow-lg transition transform hover:scale-110 hover:shadow-xl"
+                style={{ background: isDark ? "#1f1f1f" : "#ffffff" }}
+              >
+                <Icon style={{ color, fontSize: "2.8rem" }} />
+              </a>
+            ))}
           </div>
-        </>
-    )
-}   
+
+          {/* Resume Button */}
+          <div className="mt-10">
+            <a
+              href="public/resume/NAVEEN.pdf
+"
+              download
+              className="bg-red-600 hover:bg-green-600 text-white px-8 py-3 rounded-xl text-xl shadow-lg transition transform hover:scale-105"
+            >
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}

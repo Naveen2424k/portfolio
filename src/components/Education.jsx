@@ -1,5 +1,10 @@
 import React from "react";
-import img from "../assets/OIP.jpg";
+import img from "../assets/siet.jpg";
+import edu from "../assets/edd.jpg";
+import CERT1 from "../assets/CourseraFrontend.jpg";
+import CERT2 from "../assets/CourseraBackend.jpg";
+import CERT3 from "../assets/edu.jpg";
+
 // Nav is intentionally not rendered here (layout is route-driven). Remove unused import.
 
 export default function Education({ isDark, toggleTheme }) {
@@ -15,7 +20,7 @@ export default function Education({ isDark, toggleTheme }) {
         {/* Left Image Section */}
         <div className="flex justify-center md:w-1/2">
           <img
-            src={img}
+            src={edu}
             alt="Education"
             className="rounded-2xl shadow-lg max-w-full h-auto"
           />
@@ -28,10 +33,7 @@ export default function Education({ isDark, toggleTheme }) {
             Basic Qualification and Certifications
           </h3>
           <p className="text-lg leading-relaxed max-w-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            molestiae quod nesciunt voluptates fugiat voluptas ad quo natus
-            doloribus rerum consectetur dolor facere dignissimos quis dolorum
-            iste eius repellendus voluptatum.
+          Education is the key to success. It is the foundation upon which we build our lives and careers. It is the tool that helps us to achieve our goals and to make a difference in the world.
           </p>
         </div>
       </div>
@@ -60,44 +62,58 @@ export default function Education({ isDark, toggleTheme }) {
             </div>
 
             <div className="border-4 border-red-900 pb-10 pl-5 pt-5 text-base md:text-lg space-y-2">
-              <p>⚡ I am a Computer Science and Engineering student.</p>
+              <p>⚡ I am a Information Technology Student.</p>
               <p>⚡ Coursework: Data Structures, Web Development, Databases.</p>
               <p>⚡ Active in open-source and student projects.</p>
-              <button className="bg-red-700 text-white rounded ml-0 mt-4 px-4 py-2">Visit Website</button>
+              <button onClick={() => window.open("https://www.siet.ac.in/", "_blank")} className="bg-red-700 text-white rounded ml-0 mt-4 px-4 py-2 hover:bg-green-500" >Visit Website</button>
             </div>
           </div>
         </div>
       </div>
 
     {/* 3rd Page */}
-      <div className="h-screen pt-5">
-        <h2 className="text-4xl pl-6"> Certifications </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 px-6">
-          <div className="border-4 border-red-900 bg-red-900 p-4 ">
-            {/* <div className="border-4 border-black bg-black mt-6 p-0"></div> */}
-          </div>
+     <div className="min-h-screen pt-5">
+  <h2 className="text-4xl pl-6 font-semibold mb-6">Certifications</h2>
 
-          <div className="border-4 border-red-900 bg-red-900 p-4">
-            {/* <div className="border-4 border-black bg-black mt-4 p-6"></div> */}
-          </div>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
 
-          <div className="border-4 border-red-900 bg-red-900 p-4">
-            {/* <div className="border-4 border-black bg-black mt-4 p-6"></div> */}
-          </div>
+    {/* Card 1 */}
+    <div className="border-4 border-red-900 rounded-xl overflow-hidden bg-white shadow-lg 
+                    transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+      <img
+        src={CERT1}
+        alt="Certification 1"
+        className="w-full h-64 object-cover transition duration-300 hover:scale-110"
+      />
+      <div className="p-4 bg-red-900 text-white">
+        <h3 className="text-2xl font-bold">Frontend Development</h3>
+        <p className="opacity-90">Certified by Packt</p>
+        <button onClick={() => window.open("https://coursera.org/share/6081b86f77241701488130f3f69bc660", "_blank")} className="bg-red-700 text-white rounded ml-0 mt-4 px-4 py-2 hover:bg-green-500" >View certificate</button>
 
-          <div className="border-4 border-pink-900 bg-pink-900 p-4">
-            {/* <div className="border-4 border-black bg-black mt-4 p-6"></div> */}
-          </div>
-
-          <div className="border-4 border-orange-900 bg-orange-900 p-4">
-            {/* <div className="border-4 border-black bg-black mt-4 p-6"></div> */}
-          </div>
-
-          <div className="border-4 border-blue-900 bg-blue-900 p-4 hover:shadow-blue-600/90 transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:ring-2 hover:ring-blue-400">
-            {/* <div className="border-4 border-black bg-black mt-4 p-6"></div> */}
-          </div>
-        </div>
       </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="border-4 border-blue-900 rounded-xl overflow-hidden bg-white shadow-lg 
+                    transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+      <img
+        src={CERT2}
+        alt="Certification 2"
+        className="w-full h-64 object-cover transition duration-300 hover:scale-110"
+      />
+      <div className="p-4 bg-blue-900 text-white">
+        <h3 className="text-2xl font-bold">Backend Development</h3>
+        <p className="opacity-90">Issued by Packt</p>
+        <button onClick={() => window.open("https://coursera.org/share/f48ec56cacf8d5bf4a9080f34809f607", "_blank")} className="bg-blue-700 text-white rounded ml-0 mt-4 px-4 py-2 hover:bg-green-500" >View certificate</button>
+      </div>
+    </div>
+
+    
+
+  </div>
+</div>
+
+
     </>
   );
 }
