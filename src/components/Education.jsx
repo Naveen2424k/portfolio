@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../assets/siet.jpg";
 import edu from "../assets/edd.jpg";
-import CERT1 from "../assets/CourseraFrontend.jpg";
+import CERT1 from "../assets/Courserafrontend.jpg";
 import CERT2 from "../assets/CourseraBackend.jpg";
 import CERT3 from "../assets/edu.jpg";
 
