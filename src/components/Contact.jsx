@@ -71,8 +71,7 @@ export default function Contact({ isDark }) {
           {/* Resume Button */}
           <div className="mt-10">
             <a
-              href="public/resume/NAVEEN.pdf
-"
+              href="/resume/NAVEEN.pdf"
               download
               className="bg-red-600 hover:bg-green-600 text-white px-8 py-3 rounded-xl text-xl shadow-lg transition transform hover:scale-105"
             >
